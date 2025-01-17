@@ -1,0 +1,7 @@
+<launch>
+    <node name="play_kitti_for_relocate" pkg="lidar_100" type="play_kitti_for_relocate" output="screen"> 
+        <param name="dataset_folder" type="string" value="/media/spcomen21/WD5T/Dataset/kitti/sequences/" />
+        <param name="seq_number" type="string" value="07" />
+        <param name="publish_delay" type="int" value="1" />
+    </node>
+</launch>

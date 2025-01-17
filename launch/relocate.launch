@@ -1,0 +1,17 @@
+<launch>
+    <arg name="dir_map" default="/media/spcomen21/WD5T/Experiment/LiDAR-100/kitti/07/map/" />
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_100)/rviz_cfg/relocate.rviz"/>
+
+    <node name="load_map" pkg="lidar_100" type="load_map" output="screen"> 
+        <param name="PARA_DIR_MAP" value="$(arg dir_map)" />
+    </node>
+
+    <node name="relocate" pkg="lidar_100" type="relocate" output="screen"> 
+        <param name="PARA_DIR_MAP" value="$(arg dir_map)" />
+        <param name="PARA_MIN_Z_LOCATE" type="double" value="-0.5" />
+        <param name="PARA_MAX_Z_LOCATE" type="double" value="50.0" />
+    </node>
+</launch>
+
+

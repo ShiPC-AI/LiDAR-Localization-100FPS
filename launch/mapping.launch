@@ -1,0 +1,15 @@
+<launch>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_100)/rviz_cfg/mapping.rviz"/>
+    <node name="mapping" pkg="lidar_100" type="mapping" output="screen"> 
+        <param name="PARA_GRID_SIZE_MAP" type="double" value="0.5" />
+        <param name="PARA_MIN_NOVE" type="double" value="1.0" />
+        <param name="PARA_MAX_PTS_PER_MAP_GRID" type="int" value="20" />
+        <param name="PARA_MIN_PTS_PER_GROUND_GRID" type="int" value="40" />
+        <param name="PARA_MIN_Z_MAP" type="double" value="-0.5" />
+        <param name="PARA_MAX_Z_MAP" type="double" value="50.0" />
+        <param name="PARA_GRID_SIZE_GROUND" type="double" value="1.0" />
+        <param name="PARA_VOXEL_LEAF" type="double" value="0.2" />
+        <param name="PARA_SENSOR_HEIGHT" type="double" value="1.75" />
+        <param name="PARA_DIR_MAP" type="string" value="/media/spcomen21/WD5T/Experiment/LiDAR-100/kitti/07/map/" />
+    </node>
+</launch>

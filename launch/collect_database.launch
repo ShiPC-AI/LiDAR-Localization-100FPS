@@ -1,0 +1,5 @@
+<launch>
+    <node name="collect_database" pkg="lidar_100" type="collect_database" output="screen"> 
+        <param name="DIR_MAP" type="string" value="/media/spcomen21/WD5T/Experiment/LiDAR-100/kitti/07/map/" />
+    </node>
+</launch>
