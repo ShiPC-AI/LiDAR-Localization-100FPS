@@ -6,11 +6,11 @@ This method adopts an **offline-online** approach, where maps are created and th
 > Note: The current version eliminates KD trees, which slightly impact relocalization efficiency.
 ---
 
-<!-- <p align="center">
+<p align="center">
     <img src="media/07_relocate.gif" alt="drawing" width="800"/>
-</p> -->
+</p>
 
-<!-- --- -->
+---
 ##  Citation
 If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
 ```
@@ -91,9 +91,9 @@ $ roslaunch lidar_100 play_kitti_for_mapping.launch
 // a new terminal
 $ roslaunch lidar_100 collect_database.launch
 ```
-<p align="center">
+<!-- <p align="center">
     <img src="media/collect_database.png" alt="drawing" width="400"/>
-</p>
+</p> -->
 
 4. online relocalization: 
 ```
