@@ -55,13 +55,11 @@ void simulateOrientationWithinMap(const pcl::PointCloud<pcl::PointXYZ>::Ptr& clo
 }
 
 
-std::string DIR_MAP = "./";
-
 int main(int argc, char** argv) {
     ros::init(argc, argv, "collect_database");
     ros::NodeHandle nh("~");;
 
-    nh.getParam("DIR_MAP", DIR_MAP);
+    nh.getParam("PARA_DIR_MAP", PARA_DIR_MAP);
 
     std::cout << "==================================================\n";
     std::cout << "==================================================\n";
@@ -72,33 +70,33 @@ int main(int argc, char** argv) {
     PointCloudPtr candidate_pts(new PointCloud), pass_map(new PointCloud);
 
     // candidate pts
-    if (pcl::io::loadPCDFile(DIR_MAP + "candidate_pts.pcd", *candidate_pts) == 0) {
+    if (pcl::io::loadPCDFile(PARA_DIR_MAP + "candidate_pts.pcd", *candidate_pts) == 0) {
         std::cout << "Loaded candidate pts contains: " << candidate_pts->size() << " pts..\n";
     } else {
-        ROS_ERROR("Failed to load candidate points from %s", (DIR_MAP + "candidate_pts.pcd").c_str());
+        ROS_ERROR("Failed to load candidate points from %s", (PARA_DIR_MAP + "candidate_pts.pcd").c_str());
     }
     for (auto &pt : candidate_pts->points) {
         pt.z = 0.0f;
     }
 
     // pass map 
-    if (pcl::io::loadPCDFile(DIR_MAP + "pass_map.pcd", *pass_map) == 0) {
+    if (pcl::io::loadPCDFile(PARA_DIR_MAP + "pass_map.pcd", *pass_map) == 0) {
         std::cout << "Loaded pass map contains: " << pass_map->size() << " pts..\n";
     } else {
-        ROS_ERROR("Failed to load pass map from %s", (DIR_MAP + "pass_map.pcd").c_str());
+        ROS_ERROR("Failed to load pass map from %s", (PARA_DIR_MAP + "pass_map.pcd").c_str());
     }
     // removeOutliersSOR(pass_map, pass_map, 50, 1.5);
-    // pcl::io::savePCDFileASCII(DIR_MAP + "pass_map_sor.pcd", *pass_map);
+    // pcl::io::savePCDFileASCII(PARA_DIR_MAP + "pass_map_sor.pcd", *pass_map);
 
     PointCloudPtr xoy_map(new PointCloud);
     pcl::copyPointCloud(*pass_map, *xoy_map);
     for (auto &pt : xoy_map->points) {
         pt.z = 0.0;
     }
-    // pcl::io::savePCDFileASCII(DIR_MAP + "xoy_map.pcd", *xoy_map);
+    // pcl::io::savePCDFileASCII(PARA_DIR_MAP + "xoy_map.pcd", *xoy_map);
 
     randomSampleCloud(xoy_map, xoy_map, 500000);
-    // pcl::io::savePCDFileASCII(DIR_MAP + "xoy_sam_map.pcd", *xoy_map);
+    // pcl::io::savePCDFileASCII(PARA_DIR_MAP + "xoy_sam_map.pcd", *xoy_map);
 
     // collect map database
     float radius = 1.41421 * PARA_ROWS * 0.5 * PARA_LENGTH;
@@ -164,12 +162,12 @@ int main(int argc, char** argv) {
     }
 
     std::cout << "**************************************************\n";
-    std::cout << "***     Saveing offline files, please don't    ***\n";
+    std::cout << "***      Saving offline files, please don't    ***\n";
     std::cout << "***        shut down... Just a moment!         ***\n";
     std::cout << "**************************************************\n";
     for (const auto& pair : key_locations) {
         size_t key = pair.first;
-        saveIntegersAsBinary(pair.second, DIR_MAP + "database/" + std::to_string(key) + ".bin");
+        saveIntegersAsBinary(pair.second, PARA_DIR_MAP + "database/" + std::to_string(key) + ".bin");
     }
 
     return 0;
