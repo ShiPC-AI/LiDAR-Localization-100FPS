@@ -12,8 +12,8 @@
 
 void loadKITTIBinToCloudXYZ(const std::string& bin_path, int index, PointCloudPtr& cloud) {
     std::stringstream ss;
-    ss << std::setw(6) << std::setfill('0') << index; // 补零到 6 位
-    std::string filename = bin_path + ss.str() + ".bin"; // 添加文件后缀
+    ss << std::setw(6) << std::setfill('0') << index; 
+    std::string filename = bin_path + ss.str() + ".bin"; 
    
     std::fstream input(filename.c_str(), std::ios::in | std::ios::binary);
     if (!input.good()) {
@@ -51,7 +51,6 @@ void loadKITTIPoses(const std::string& filename, std::vector<Eigen::Matrix4d, Ei
     ifs.close();
 }
 
-// 将整数数据保存为二进制文件，包含元素数量
 void saveIntegersAsBinary(const std::vector<size_t>& numbers, const std::string& filename) {
     std::ofstream file(filename, std::ios::binary);
     if (!file) {
@@ -64,7 +63,6 @@ void saveIntegersAsBinary(const std::vector<size_t>& numbers, const std::string&
     file.close();
 }
 
-// 从二进制文件中读取整数数据，包含元素数量
 void readIntegersFromBinary(const std::string& filename, std::vector<size_t>& numbers) {
     std::ifstream file(filename, std::ios::binary);
     if (!file) {
