@@ -1,4 +1,4 @@
-# LiDAR_Localization_100FPS
+## LiDAR_Localization_100FPS
 **LiDAR_Localization_100FPS**, referred to as **LiDAR-100**, is a **straightforward yet effective** relocalization solution that leverages a point cloud map and a single LiDAR scan. It is specifically designed to efficiently restore the global 3-DOF pose of a robot that has been kidnapped or lost.
 
 This method adopts an offline-online approach, where maps are created and the database is collected offline once, enabling multiple instances of online relocalization.
@@ -17,8 +17,9 @@ This method adopts an offline-online approach, where maps are created and the da
 
 > **Note:**  The left side shows the localization illustration, while the right displays a simple descriptor.
 ---
-##  Citation
-If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
+### Citation
+- **LiDAR-100** has been accepted for *JAG*: [Published Paper](https://www.sciencedirect.com/science/article/pii/S1569843223001589).
+- If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
 ```
 @article{shi2023lidar,
   title={LiDAR localization at 100 FPS: a map-aided and template descriptor-based global method},
@@ -30,8 +31,7 @@ If you use code or data of **LiDAR-100** in your academic research, please cite 
   publisher={Elsevier}
 }
 ```
-
-## Test Environments
+### Test Environments
 ```
 - Ubuntu 20.04
 - ROS noetic
@@ -39,7 +39,7 @@ If you use code or data of **LiDAR-100** in your academic research, please cite 
 - Eigen
 - OpenMP
 ```
-## File Structure
+### File Structure
 Using KITTI as an example, despite issues with the correction file, it is utilized to convert the camera pose to the LiDAR-centered coordinate system for comparison consistency.
 
 1. **KITTI dataset**
@@ -71,7 +71,7 @@ A "database" subdirectory should be created within the "map" directory, and all 
 │                  └── 1600.bin
 ```
 
-## Run the package
+### Run the package
 1. **download and build the code** 
 ```
 $ git clone https://github.com/ShiPC-AI/LiDAR-Localization-100FPS
@@ -111,7 +111,7 @@ $ roslaunch lidar_100 relocate.launch
 // a new terminal
 $ roslaunch lidar_100 play_kitti_for_relocate.launch
 ```
-## Other Examples
+### Other Examples
 1. **KITTI 06**
 <p align="center">
     <img src="media/kitti_06_match.jpg" alt="drawing" width="800"/>
@@ -127,7 +127,17 @@ $ roslaunch lidar_100 play_kitti_for_relocate.launch
     <img src="media/corridor_match.jpg" alt="drawing" width="800"/>
 </p>
 
-## Acknowledgments
+### Contact
+For any inquiries, please feel free to contact me:
+- **Pengcheng Shi** {[shipc_2021@whu.edu.cn]()}
+
+### Acknowledgments
 
 Thanks for [linefit](https://github.com/lorenwel/linefit_ground_segmentation).
 
+### TODO List
+
+- [x] Add publised paper
+- [x] Add demo examples
+- [x] Add ROS support
+- [ ] Eliminate th reliance on the offline mapping process.
