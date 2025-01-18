@@ -93,8 +93,8 @@ $ roslaunch lidar_100 collect_database.launch
 ```
 <p align="center">
     <div style="display: flex; justify-content: center; gap: 20px;">
-        <img src="media/collect_database.png" alt="drawing" width="300"/>
-        <img src="media/part_of_database.png" alt="drawing" width="300"/>
+        <img src="media/collect_database.png" alt="drawing" height="450"/>
+        <img src="media/part_of_database.png" alt="drawing" height="450"/>
     </div>
 </p>
 
