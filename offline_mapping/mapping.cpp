@@ -1,15 +1,11 @@
 #include <pcl_ros/point_cloud.h>
 #include <ros/ros.h>
-// #include <pcl/point_types.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl/common/transforms.h>
 #include <geometry_msgs/PoseStamped.h>
-// #include <iostream>
-// #include <fstream>
 #include <queue>
 #include <mutex>
-// #include <Eigen/Dense>
 #include <unordered_map>
 #include "for_time.hpp"
 #include "for_cloud.hpp"
@@ -18,8 +14,6 @@
 #include <pcl/filters/extract_indices.h>
 #include "offline_mapping/linefit/ground_segmentation.h"
 #include "pcl/io/pcd_io.h"
-// typedef pcl::PointCloud<pcl::PointXYZ> PointCloud;
-// typedef pcl::PointCloud<pcl::PointXYZ>::Ptr PointCloudPtr;
 
 std::mutex mBuf;
 std::queue<sensor_msgs::PointCloud2ConstPtr> _cloud_buf;
