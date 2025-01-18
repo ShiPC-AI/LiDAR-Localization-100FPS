@@ -98,7 +98,7 @@ $ roslaunch lidar_100 collect_database.launch
     </div>
 </p>
 
-> The left side shows the terminal output of the "collect database", while the right displays a portion of the map database.
+> **Note:**  The left side shows the terminal output of the "collect database", while the right displays a portion of the map database.
 4. **online relocalization**
 ```
 $ roslaunch lidar_100 relocate.launch
@@ -121,6 +121,7 @@ $ roslaunch lidar_100 play_kitti_for_relocate.launch
 <p align="center">
     <img src="media/corridor_match.jpg" alt="drawing" width="800"/>
 </p>
+
 ## Acknowledgments
 
 Thanks for [linefit](https://github.com/lorenwel/linefit_ground_segmentation).
