@@ -56,7 +56,6 @@ void saveIntegersAsBinary(const std::vector<size_t>& numbers, const std::string&
     if (!file) {
         std::exit((std::cout << "Failed to save:" << filename << "\n", EXIT_FAILURE));
     }
-    // 写入元素数量
     size_t size = numbers.size();
     file.write(reinterpret_cast<const char*>(&size), sizeof(size));
     file.write(reinterpret_cast<const char*>(numbers.data()), numbers.size() * sizeof(size_t));
