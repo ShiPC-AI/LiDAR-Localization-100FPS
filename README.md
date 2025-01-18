@@ -15,7 +15,7 @@ This method adopts an offline-online approach, where maps are created and the da
     <img src="media/grid_desc.jpg" alt="drawing" height="220"/>
 </p>
 
-> **Note:**  The left side shows localization illustration, while the right displays a simple descriptor.
+> **Note:**  The left side shows the localization illustration, while the right displays a simple descriptor.
 ---
 ##  Citation
 If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
