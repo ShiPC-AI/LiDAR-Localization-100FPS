@@ -1,15 +1,21 @@
 # LiDAR_Localization_100FPS
-**LiDAR_Localization_100FPS**, referred to as **LiDAR-100**, is a global localization or relocalization solution that leverages a point cloud map and a single LiDAR scan. It is specifically designed to efficiently restore the global 3-DOF pose of a robot that has been kidnapped or lost.
+**LiDAR_Localization_100FPS**, referred to as **LiDAR-100**, is a **straightforward yet effective** relocalization solution that leverages a point cloud map and a single LiDAR scan. It is specifically designed to efficiently restore the global 3-DOF pose of a robot that has been kidnapped or lost.
 
-This method adopts an **offline-online** approach, where maps are created and the database is collected offline once, enabling multiple instances of online relocalization.
+This method adopts an ***offline-online*** approach, where maps are created and the database is collected offline once, enabling multiple instances of online relocalization.
 
-> **Note:**  The current version eliminates KD trees, which slightly impact relocalization efficiency.
+> **Note:** The current version eliminates KD trees, which slightly impact relocalization efficiency.
 ---
-
 <p align="center">
     <img src="media/07_relocate.gif" alt="drawing" width="800"/>
 </p>
 
+---
+<p align="center">
+    <img src="media/localization_lobby.jpg" alt="drawing" height="220" style="margin-right: 20px;"/>
+    <img src="media/grid_desc.jpg" alt="drawing" height="220"/>
+</p>
+
+> **Note:**  The left side shows localization illustration, while the right displays a simple descriptor.
 ---
 ##  Citation
 If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
@@ -24,6 +30,7 @@ If you use code or data of **LiDAR-100** in your academic research, please cite 
   publisher={Elsevier}
 }
 ```
+
 ## Test Environments
 ```
 - Ubuntu 20.04
