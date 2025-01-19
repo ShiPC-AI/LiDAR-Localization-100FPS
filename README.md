@@ -129,7 +129,7 @@ $ roslaunch lidar_100 play_kitti_for_relocate.launch
 </p>
 
 ### Contact
-For any inquiries, please feel free to contact me:
+For any inquiries, feel free to contact me:
 - **Pengcheng Shi** {[shipc_2021@whu.edu.cn]()}
 
 ### Acknowledgments
