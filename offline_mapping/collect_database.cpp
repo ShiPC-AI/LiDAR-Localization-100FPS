@@ -61,11 +61,10 @@ int main(int argc, char** argv) {
 
     nh.getParam("PARA_DIR_MAP", PARA_DIR_MAP);
 
-    std::cout << "==================================================\n";
-    std::cout << "==================================================\n";
-    std::cout << "||       Begin Collecting Offline Database      ||\n";
-    std::cout << "||                                              ||\n";
-    std::cout << "==================================================\n";
+    std::cout << "**************************************************\n";
+    std::cout << "***  Loading Offline Map and Candidate Points  ***\n";
+    std::cout << "***    Please do not turn off the terminal.    ***\n";
+    std::cout << "**************************************************\n";
 
     PointCloudPtr candidate_pts(new PointCloud), pass_map(new PointCloud);
 
