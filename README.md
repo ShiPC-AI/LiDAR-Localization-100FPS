@@ -136,7 +136,7 @@ For any inquiries, feel free to contact me:
 
 Thanks for [linefit](https://github.com/lorenwel/linefit_ground_segmentation).
 
-### TODO List
+### Todo List
 
 - [x] Add publised paper
 - [x] Add demo examples
