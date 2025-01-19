@@ -100,7 +100,7 @@ $ roslaunch lidar_100 play_kitti_for_mapping.launch
 $ roslaunch lidar_100 collect_database.launch
 ```
 <p align="center">
-    <img src="media/collect_database.png" alt="drawing" height="450" style="margin-right: 20px;"/>
+    <img src="media/collect_offline_database.png" alt="drawing" height="450" style="margin-right: 20px;"/>
     <img src="media/part_of_database.png" alt="drawing" height="450"/>
 </p>
 
