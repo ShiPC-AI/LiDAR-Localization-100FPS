@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
 
     std::cout << "==================================================\n";
     std::cout << "==================================================\n";
-    std::cout << "||         Begin Offline Collect Database       ||\n";
+    std::cout << "||       Begin Collecting Offline Database      ||\n";
     std::cout << "||                                              ||\n";
     std::cout << "==================================================\n";
 
