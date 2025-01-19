@@ -56,6 +56,7 @@ Using KITTI as an example, despite issues with the correction file, it is utiliz
 > **Note:** In lidar_pose.txt, each row represents a LiDAR-centered pose in KITTI format, i.e., a 3x4 matrix.
 
 2. **Map directory**
+
 A "database" subdirectory should be created within the "map" directory, and all files generated during offline map processing will be stored within these directories.
 ```
 ├── kitti
