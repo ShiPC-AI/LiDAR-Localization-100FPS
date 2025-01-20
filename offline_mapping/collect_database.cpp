@@ -154,7 +154,7 @@ int main(int argc, char** argv) {
         }
 
         for (size_t key = 0; key < (PARA_ROWS * PARA_COLS); ++key) {
-            if (descs_total[i](0, key) > 0) {
+            if (descs_total[i](0, key) > 0.5) {
                 key_locations[key].push_back(i);
             }
         }
