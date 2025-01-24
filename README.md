@@ -1,5 +1,5 @@
 ## LiDAR_Localization_100FPS
-**LiDAR_Localization_100FPS**, referred to as **LiDAR-100**, is a **straightforward yet effective** relocalization solution that leverages a point cloud map and a single LiDAR scan. It is specifically designed to efficiently restore the global 3-DOF pose of a robot that has been kidnapped or lost.
+**LiDAR_Localization_100FPS**, referred to as **LiDAR-ReLoc**, is a **straightforward yet effective** relocalization solution that leverages a point cloud map and a single LiDAR scan. It is specifically designed to efficiently (**100 FPS**) restore the global 3-DOF pose of a robot that has been kidnapped or lost. 
 
 This method adopts an offline-online approach, where maps are created and the database is collected offline once, enabling multiple instances of online relocalization.
 
