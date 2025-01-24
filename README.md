@@ -18,8 +18,8 @@ This method adopts an offline-online approach, where maps are created and the da
 > **Note:**  The left side shows the localization illustration, while the right displays a simple descriptor.
 ---
 ### Citation
-- **LiDAR-100** has been accepted for *JAG*: [Published Paper](https://www.sciencedirect.com/science/article/pii/S1569843223001589).
-- If you use code or data of **LiDAR-100** in your academic research, please cite our paper:
+- **LiDAR-ReLoc** has been accepted for *JAG*: [Published Paper](https://www.sciencedirect.com/science/article/pii/S1569843223001589).
+- If you use code or data of **LiDAR-ReLoc** in your academic research, please cite our paper:
 ```
 @article{shi2023lidar,
   title={LiDAR localization at 100 FPS: a map-aided and template descriptor-based global method},
