@@ -3,7 +3,7 @@
 
 This method adopts an offline-online approach, where maps are created and the database is collected offline once, enabling multiple instances of online relocalization.
 
-> **Note:** The current version eliminates KD trees, which slightly impact relocalization efficiency.
+> **Note:** The current version eliminates KD trees, which slightly impact relocalization efficiency .
 ---
 <p align="center">
     <img src="media/07_relocate.gif" alt="drawing" width="800"/>
