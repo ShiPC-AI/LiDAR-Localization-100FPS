@@ -75,7 +75,7 @@ A "database" subdirectory should be created within the "map" directory, and all 
 ### Run the package
 1. **download and build the code** 
 ```
-$ git clone https://github.com/ShiPC-AI/LiDAR-Localization-100FPS
+$ git clone https://github.com/ShiPC-AI/LiDAR-Localization-100FPS.git
 // move the folder to your catkin/src/
 // cd the folder of catkin
 $ catkin_make
@@ -84,9 +84,9 @@ $ catkin_make
 
 2. **offline mapping** 
 ```
-$ roslaunch lidar_100 mapping.launch
+$ roslaunch lidar_reloc mapping.launch
 // a new terminal 
-$ roslaunch lidar_100 play_kitti_for_mapping.launch
+$ roslaunch lidar_reloc play_kitti_for_mapping.launch
 ```
 <p align="center">
     <img src="media/07_mapping.gif" alt="drawing" width="800"/>
@@ -97,7 +97,7 @@ $ roslaunch lidar_100 play_kitti_for_mapping.launch
 3. **offline collecteing database**: 
 ```
 // a new terminal
-$ roslaunch lidar_100 collect_database.launch
+$ roslaunch lidar_reloc collect_database.launch
 ```
 <p align="center">
     <img src="media/collect_offline_database.png" alt="drawing" height="450" style="margin-right: 20px;"/>
@@ -107,10 +107,10 @@ $ roslaunch lidar_100 collect_database.launch
 > **Note:**  The left side shows the terminal output of the "collect database", while the right displays a portion of the map database.
 4. **online relocalization**
 ```
-$ roslaunch lidar_100 relocate.launch
+$ roslaunch lidar_reloc relocate.launch
 // Wait for RViz to load the map (about 1 second)
 // a new terminal
-$ roslaunch lidar_100 play_kitti_for_relocate.launch
+$ roslaunch lidar_reloc play_kitti_for_relocate.launch
 ```
 ### Other Examples
 1. **KITTI 06**

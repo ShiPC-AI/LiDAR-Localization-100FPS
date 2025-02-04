@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>lidar_100</name>
+  <name>lidar_reloc</name>
   <version>0.0.0</version>
-  <description>The lidar_100 package</description>
+  <description>The lidar_reloc package</description>
 
   <maintainer email="shipc_2021@whu.edu.cn">pengcheng shi</maintainer>
 
